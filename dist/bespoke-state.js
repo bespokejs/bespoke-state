@@ -10,8 +10,15 @@
 
 	bespoke.plugins.state = function(deck) {
 		var modifyState = function(method, event) {
-			var state = event.slide.getAttribute('data-bespoke-state');
-			state && deck.parent.classList[method](state);
+			var attr = event.slide.getAttribute('data-bespoke-state') || '',
+				states = attr.split(' ');
+
+			for (var i = 0, l = states.length; i < l; i++) {
+				/* Need to do this since splitting an empty string results in
+				 * an array containing an empty string. */
+				if (!states[i]) continue;
+				deck.parent.classList[method](states[i]);
+			}
 		};
 
 		deck.on('activate', modifyState.bind(null, 'add'));

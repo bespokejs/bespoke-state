@@ -18,7 +18,8 @@
 				for (var i = 0; i < NO_OF_SLIDES; i++) {
 					slides.push(document.createElement(SLIDE_TAG));
 					if (i !== NON_STATE_SLIDE_INDEX) {
-						slides[i].setAttribute('data-bespoke-state', 'state-' + i);
+						slides[i].setAttribute('data-bespoke-state',
+												'stateA'+i +' stateB'+i);
 					}
 					article.appendChild(slides[i]);
 				}
@@ -43,7 +44,8 @@
 			});
 
 			it("should add the state to the parent", function() {
-				expect(deck.parent.classList.contains('state-1')).toBe(true);
+				expect(deck.parent.classList.contains('stateA1')).toBe(true);
+				expect(deck.parent.classList.contains('stateB1')).toBe(true);
 			});
 
 			describe("when another slide is activated", function() {
@@ -53,7 +55,8 @@
 				});
 
 				it("should remove the state from the parent", function() {
-					expect(deck.parent.classList.contains('state-1')).toBe(false);
+					expect(deck.parent.classList.contains('stateA1')).toBe(false);
+					expect(deck.parent.classList.contains('stateB1')).toBe(false);
 				});
 
 			});
