@@ -37,7 +37,7 @@ Finally, add `data-bespoke-state` attributes to your slides.
   <section data-bespoke-state="special">
     Special deck style
   </section>
-  <section data-bespoke-state="super-special">
+  <section data-bespoke-state="super special">
     Super special deck style
   </section>
   <section>
