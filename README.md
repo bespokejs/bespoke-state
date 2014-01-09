@@ -30,7 +30,7 @@ First, include both `bespoke.js` and `bespoke-state.js` in your page.
 Then, simply include the plugin when creating your deck with the `from()` function.
 
 ```js
-bespoke.horizontal.from(selector, {
+bespoke.from(selector, {
   state: true
 });
 ```
