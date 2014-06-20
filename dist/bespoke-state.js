@@ -1,5 +1,5 @@
 /*!
- * bespoke-state v0.2.2
+ * bespoke-state v1.0.0-beta
  *
  * Copyright 2014, Mark Dalgleish
  * This content is released under the MIT license

@@ -1,6 +1,6 @@
 {
   "name": "bespoke-state",
-  "version": "0.2.2",
+  "version": "1.0.0-beta",
   "main": "./dist/bespoke-state.js",
   "ignore": [
     "**/.*"

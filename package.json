@@ -1,7 +1,7 @@
 {
   "name": "bespoke-state",
   "title": "bespoke-state",
-  "version": "0.2.2",
+  "version": "1.0.0-beta",
   "description": "Slide-specific deck styles for Bespoke.js",
   "author": {
     "name": "Mark Dalgleish",
