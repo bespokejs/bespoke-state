@@ -1,8 +1,8 @@
-[![Build Status](https://secure.travis-ci.org/markdalgleish/bespoke-state.png)](http://travis-ci.org/markdalgleish/bespoke-state)
+[![Build Status](https://secure.travis-ci.org/markdalgleish/bespoke-state.png?branch=master)](https://travis-ci.org/markdalgleish/bespoke-state) [![Coverage Status](https://coveralls.io/repos/markdalgleish/bespoke-state/badge.png)](https://coveralls.io/r/markdalgleish/bespoke-state)
 
 # bespoke-state
 
-### Slide-Specific Deck Styles for [Bespoke.js](https://github.com/markdalgleish/bespoke.js)
+Slide-specific deck styles for [Bespoke.js](https://github.com/markdalgleish/bespoke.js)
 
 Style your entire deck differently based on the active slide.
 
@@ -10,29 +10,32 @@ Classes specified in `data-bespoke-state` attributes will be added to the deck's
 
 ## Download
 
-Download the [production version][min] or the [development version][max].
+Download the [production version][min] or the [development version][max], or use a [package manager](#package-managers).
 
 [min]: https://raw.github.com/markdalgleish/bespoke-state/master/dist/bespoke-state.min.js
 [max]: https://raw.github.com/markdalgleish/bespoke-state/master/dist/bespoke-state.js
 
-### Bower
-
-Bespoke-state can be installed from [Bower](http://twitter.github.com/bower/) using the following command:
-
-```bash
-$ bower install bespoke-state
-```
-
 ## Usage
 
-First, include both `bespoke.js` and `bespoke-state.js` in your page.
+This plugin is shipped in a [UMD format](https://github.com/umdjs/umd), meaning that it is available as a CommonJS/AMD module or browser global.
 
-Then, simply include the plugin when creating your deck with the `from()` function.
+For example, when using CommonJS modules:
 
 ```js
-bespoke.from(selector, {
-  state: true
-});
+var bespoke = require('bespoke'),
+  state = require('bespoke-state');
+
+bespoke.from('article', [
+  state()
+]);
+```
+
+When using browser globals:
+
+```js
+bespoke.from('article', [
+  bespoke.plugins.state()
+]);
 ```
 
 Finally, add `data-bespoke-state` attributes to your slides.
@@ -54,12 +57,24 @@ Finally, add `data-bespoke-state` attributes to your slides.
 </article>
 ```
 
-## Questions?
+## Package managers
 
-Contact me on GitHub or Twitter: [@markdalgleish](http://twitter.com/markdalgleish)
+### npm
+
+```bash
+$ npm install bespoke-bullets
+```
+
+### Bower
+
+```bash
+$ bower install bespoke-bullets
+```
+
+## Credits
+
+This plugin was built with [generator-bespokeplugin](https://github.com/markdalgleish/generator-bespokeplugin).
 
 ## License
 
-Copyright 2013, Mark Dalgleish  
-This content is released under the MIT license  
-http://markdalgleish.mit-license.org
+[MIT License](http://en.wikipedia.org/wiki/MIT_License)

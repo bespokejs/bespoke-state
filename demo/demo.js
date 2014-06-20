@@ -1,5 +1,6 @@
-bespoke.from('article', {
-	keys: true,
-	touch: true,
-	state: true
-});
+bespoke.from('article', [
+  bespoke.plugins.classes(),
+  bespoke.plugins.keys(),
+  bespoke.plugins.touch(),
+  bespoke.plugins.state()
+]);
