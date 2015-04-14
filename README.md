@@ -62,13 +62,13 @@ Finally, add `data-bespoke-state` attributes to your slides.
 ### npm
 
 ```bash
-$ npm install bespoke-bullets
+$ npm install bespoke-state
 ```
 
 ### Bower
 
 ```bash
-$ bower install bespoke-bullets
+$ bower install bespoke-state
 ```
 
 ## Credits
